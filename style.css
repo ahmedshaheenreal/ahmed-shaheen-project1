@@ -242,3 +242,12 @@ nav button {
 .star-rating {
   margin-bottom: 10px;
 }
+
+/*footer*/
+
+footer {
+  text-align: center;
+  padding-block: 35px;
+  background-color: var(--bg_body);
+}
+
