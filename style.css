@@ -1,0 +1,244 @@
+:root {
+  --brand-primary: #0768ac;
+  --brand-secondary: #03c180;
+  --bg_default: #ffffff;
+  --bg_body: #f0f9ff;
+  --lines-color: #dddddd;
+  --body-text: #333333;
+  --heart-color: #dc143c;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+.container {
+  max-width: 1440px;
+  margin: auto;
+  padding-inline: 2rem;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 1.5rem;
+}
+header h1 {
+  color: var(--brand-primary);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+}
+nav button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+  border: 1px solid #ddd;
+  color: var(--body-text);
+  background-color: var(--bg_default);
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  nav button span {
+    display: none;
+  }
+}
+.icon {
+  width: 15px;
+}
+/* welcome  */
+.welcome .text,
+.welcome .text > p {
+  margin: auto;
+  width: fit-content;
+}
+
+.welcome .text {
+  padding-bottom: 30px;
+}
+.colorful-bg {
+  height: 75px;
+  position: relative;
+  overflow: hidden;
+}
+.colorful-bg div {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.colorful-bg .blue {
+  background: linear-gradient(
+    90deg,
+    rgba(7, 104, 172, 1) 40%,
+    rgba(3, 193, 128, 1) 100%
+  );
+  transform: skewY(-3deg);
+  transform-origin: left bottom;
+}
+
+.colorful-bg .green {
+  background-color: var(--brand-secondary);
+  transform: skewY(3deg);
+  transform-origin: right bottom;
+}
+.welcome h1 {
+  color: var(--brand-secondary);
+}
+.welcome p {
+  color: #333333;
+}
+@media (max-width: 767px) {
+  .colorful-bg {
+    height: 30px;
+  }
+}
+
+/* main area  */
+.home-body {
+  background-color: var(--bg_body);
+  padding-block: 30px;
+}
+
+.home-body .search-form {
+  border-radius: 15px;
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 40px;
+  box-shadow: 0 0 2px 1px var(--lines-color);
+}
+@media (max-width: 767px) {
+  .home-body .search-form {
+    flex-wrap: wrap;
+  }
+  .home-body .search-form .filters {
+    flex-grow: 1;
+    border-top: 2px solid var(--lines-color);
+  }
+  .home-body .search-form .filters .box {
+    flex-grow: 1;
+  }
+  .home-body .search-form .filters .box select {
+    width: 100%;
+  }
+}
+.home-body .search-form .search-field {
+  flex-grow: 1;
+  padding: 5px 10px;
+  background-color: var(--bg_default);
+  position: relative;
+  padding-left: 30px;
+}
+.home-body .search-form .search-field .icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+.home-body .search-form input[type="text"] {
+  width: 100%;
+  outline: none;
+  display: block;
+  height: 100%;
+  border: none;
+  min-width: 300px;
+}
+
+.home-body .search-form .filters .box {
+  border-left: var(--lines-color) solid 1px;
+  padding-left: 15px;
+}
+.home-body .search-form .filters .box > p {
+  padding-top: 5px;
+  font-size: 8px;
+  font-weight: 700;
+}
+.home-body .search-form select {
+  border: none;
+  width: 100px;
+  outline: none;
+  cursor: pointer;
+}
+
+.home-body .search-form .filters {
+  display: flex;
+  background-color: var(--bg_default);
+}
+
+.search-count {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+/* result cards  */
+.result {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+@media (max-width: 991px) {
+  .result {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+@media (max-width: 767px) {
+  .result {
+    display: block;
+  }
+  .result .card {
+    margin: 10px auto;
+  }
+}
+.card {
+  max-width: 300px;
+  border-radius: 10px;
+  background-color: var(--bg_default);
+  box-shadow: 1px 1px 1px var(--lines-color);
+}
+
+.card img {
+  max-width: 100%;
+}
+
+.card .category {
+  padding-top: 10px;
+  color: var(--body-text);
+  font-size: 12px;
+}
+.card .text {
+  padding: 10px;
+}
+
+.card .title {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.card .author {
+  color: var(--body-text);
+  opacity: 0.8;
+  font-size: 12px;
+}
+
+.star-rating img {
+  width: 10px;
+}
+.star-rating {
+  margin-bottom: 10px;
+}
