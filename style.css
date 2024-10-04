@@ -22,6 +22,10 @@ body {
   margin: auto;
   padding-inline: 2rem;
 }
+.main-wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
 header {
   display: flex;
   justify-content: space-between;
