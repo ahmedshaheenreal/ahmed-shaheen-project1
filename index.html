@@ -20,22 +20,12 @@
       <header>
         <h1>Web Topics</h1>
         <nav>
-          <button>
-            <img
-              src="./assets/icons/moon-outline.svg"
-              alt=""
-              class="icon"
-              srcset=""
-            />
+          <button type="button" id="dark-mode-btn">
+            <ion-icon name="moon"></ion-icon>
             <span>Dark Mode</span>
           </button>
-          <button type="button">
-            <img
-              src="./assets/icons/heart-outline.svg"
-              alt=""
-              class="icon"
-              srcset=""
-            />
+          <button type="button" id="fav-btn">
+            <ion-icon name="heart"></ion-icon>
             <span>Favorite</span>
           </button>
         </nav>
@@ -53,11 +43,12 @@
           </div>
         </section>
         <!-- home-body  -->
+
         <section class="home-body">
           <div class="container form-container">
             <form class="search-form">
               <div class="search-field">
-                <img src="./assets/icons/search.svg" class="icon" alt="" />
+                <ion-icon class="icon" name="search" size="small"></ion-icon>
                 <input type="text" placeholder="Search for something!" />
               </div>
               <div class="filters">
@@ -241,8 +232,89 @@
           </div>
         </section>
       </main>
-      <footer>&copy; 2024 created by TAP</footer>
+      <div class="fav-section">
+        <h2 class="container">My Favorite Topics</h2>
+        <div class="container fav-container" id="favorites">
+          <div class="card fav-card">
+            <img src="./assets/Logos/vuejs.jpeg" alt="" />
+            <div class="text">
+              <p class="title"><strong>Vue js</strong></p>
+              <div class="star-rating">
+                <img src="./assets/icons/star.svg" alt="" />
+                <img src="./assets/icons/star.svg" alt="" />
+                <img src="./assets/icons/star.svg" alt="" />
+                <img src="./assets/icons/star.svg" alt="" />
+                <img src="./assets/icons/star.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="card fav-card">
+            <img src="./assets/Logos/vuejs.jpeg" alt="" />
+            <div class="text">
+              <p class="title"><strong>Vue js</strong></p>
+              <div class="star-rating">
+                <img src="./assets/icons/star.svg" alt="" />
+                <img src="./assets/icons/star.svg" alt="" />
+                <img src="./assets/icons/star.svg" alt="" />
+                <img src="./assets/icons/star.svg" alt="" />
+                <img src="./assets/icons/star.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="card fav-card">
+            <img src="./assets/Logos/vuejs.jpeg" alt="" />
+            <div class="text">
+              <p class="title"><strong>Vue js</strong></p>
+              <div class="star-rating">
+                <img src="./assets/icons/star.svg" alt="" />
+                <img src="./assets/icons/star.svg" alt="" />
+                <img src="./assets/icons/star.svg" alt="" />
+                <img src="./assets/icons/star.svg" alt="" />
+                <img src="./assets/icons/star.svg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="card fav-card">
+            <img src="./assets/Logos/vuejs.jpeg" alt="" />
+            <div class="text">
+              <p class="title"><strong>Vue js</strong></p>
+              <div class="star-rating">
+                <img src="./assets/icons/star.svg" alt="" />
+                <img src="./assets/icons/star.svg" alt="" />
+                <img src="./assets/icons/star.svg" alt="" />
+                <img src="./assets/icons/star.svg" alt="" />
+                <img src="./assets/icons/star.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer><p class="container">&copy; 2024 created by TAP</p></footer>
     </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <script src="main.js"></script>
   </body>
 </html>
+
+<!-- <div class="card">
+              <img src="./assets/Logos/vuejs.jpeg" alt="" />
+              <div class="text">
+                <p class="category">Web Development Languages</p>
+                <p class="title"><strong>Vue js</strong></p>
+                <div class="star-rating">
+                  <img src="./assets/icons/star.svg" alt="" />
+                  <img src="./assets/icons/star.svg" alt="" />
+                  <img src="./assets/icons/star.svg" alt="" />
+                  <img src="./assets/icons/star.svg" alt="" />
+                  <img src="./assets/icons/star.svg" alt="" />
+                </div>
+                <p class="author">Author: <span>Sarah Smith</span></p>
+              </div>
+            </div> -->
