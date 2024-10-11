@@ -63,5 +63,11 @@ function addFavTopic() {
   if (!favItems.find((e) => "" + e.id === "" + item.id)) {
     favItems.push(item);
     localStorage.setItem("favorites", JSON.stringify(favItems));
+    renderCards();
   }
+}
+function renderCards() {
+  const favCards = JSON.parse(localStorage.getItem("favorites")) || [];
+  const result = favCards.reduce((acc, card) => acc + createCard(card), "");
+  favResult.innerHTML = result;
 }
