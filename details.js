@@ -1,7 +1,10 @@
 const url = window.location.href; // or any other URL string
 const id = url.split("#").pop(); //get the id
 const detailContainer = document.getElementById("item-details-section");
+
+const favItems = JSON.parse(localStorage.getItem("favorites")) || [];
 let item;
+
 async function fetchData(url) {
   const response = await fetch(url);
   const data = await response.json();
@@ -29,7 +32,7 @@ function renderData() {
       </div>
       <div class="interest">
         <p>Interested in this topic?</p>
-        <button>Add to favorites</button>
+        <button type="button" onclick="addFavTopic()">Add to favorites</button>
       </div>
       <p class="unlimited">Unlimited Credits</p>
     </div>
@@ -53,4 +56,12 @@ function renderData() {
   </div>
 `;
   detailContainer.innerHTML = details;
+}
+
+function addFavTopic() {
+  console.log("clickked");
+  if (!favItems.find((e) => "" + e.id === "" + item.id)) {
+    favItems.push(item);
+    localStorage.setItem("favorites", JSON.stringify(favItems));
+  }
 }

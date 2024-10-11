@@ -2,8 +2,9 @@ const root = document.documentElement;
 const darkModeBtn = document.getElementById("dark-mode-btn");
 const favBtn = document.getElementById("fav-btn");
 const favSection = document.getElementById("favorite-section");
-const favoriteClose = document.getElementById("favorite-close");
+const favResult = document.getElementById("favorites");
 
+const favoriteClose = document.getElementById("favorite-close");
 let dark = false;
 let favClosed = true;
 darkModeBtn.addEventListener("click", toggleDarkmode);
@@ -27,4 +28,31 @@ function toggleFavsection() {
     favClosed = true;
     favSection.classList.add("fav-collapse");
   }
+  renderCards();
 }
+
+function createCard(card) {
+  return `<div class="card fav-card">
+          <img src="./assets/Logos/${card.image}" alt="" />
+          <div class="text">
+            <p class="title">
+              <strong>${card.topic}</strong>
+            </p>
+            <div class="star-rating">
+              <img src="./assets/icons/star.svg" alt="" />
+              <img src="./assets/icons/star.svg" alt="" />
+              <img src="./assets/icons/star.svg" alt="" />
+              <img src="./assets/icons/star.svg" alt="" />
+              <img src="./assets/icons/star.svg" alt="" />
+            </div>
+          </div>
+        </div>`;
+}
+
+function renderCards() {
+  const favCards = JSON.parse(localStorage.getItem("favorites")) || [];
+  const result = favCards.reduce((acc, card) => acc + createCard(card), "");
+  favResult.innerHTML = result;
+}
+
+renderCards();
