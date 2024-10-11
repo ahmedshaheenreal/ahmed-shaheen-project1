@@ -15,7 +15,7 @@ function renderData(items) {
 function createCard(item) {
   const card = `
     <div class="card">
-        <a href="/details-demo.html#${item.id}"><img src="./assets/Logos/${item.image}" alt="" /></a>
+        <a href="/ahmed-shaheen-project1/details-demo.html#${item.id}"><img src="./assets/Logos/${item.image}" alt="" /></a>
             <div class="text">
                 <p class="category">${item.category}</p>
                 <p class="title"><strong>${item.topic}</strong></p>
